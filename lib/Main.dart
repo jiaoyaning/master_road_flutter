@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:fluttertoast/fluttertoast.dart';
 
 class MyApp extends StatelessWidget {
   @override
@@ -31,6 +32,20 @@ class _MyHomePageState extends State<MyHomePage> {
     });
   }
 
+  _toast(){
+    // Navigator.of(context).pushNamed('/home');
+    print("_toast");
+    Navigator.pushNamed(context, '/home');
+    // Fluttertoast.showToast(
+    //     msg: "这是一个toast",
+    //     toastLength: Toast.LENGTH_LONG,
+    //     gravity: ToastGravity.BOTTOM,  // 消息框弹出的位置
+    //     backgroundColor: Colors.red,
+    //     textColor: Colors.white,
+    //     fontSize: 16.0
+    // );
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -48,6 +63,14 @@ class _MyHomePageState extends State<MyHomePage> {
               '$_counter',
               style: Theme.of(context).textTheme.headline4,
             ),
+            RaisedButton(
+              onPressed: _toast,
+              // onPressed: () {
+              //   _toast();
+              //   Navigator.of(context).pushNamed('/home');
+              // },
+              child: Text("点击跳转哦!"),
+            )
           ],
         ),
       ),
@@ -55,7 +78,7 @@ class _MyHomePageState extends State<MyHomePage> {
         onPressed: _incrementCounter,
         tooltip: 'Increment',
         child: Icon(Icons.add),
-      ), // This trailing comma makes auto-formatting nicer for build methods.
+      ),
     );
   }
 }
