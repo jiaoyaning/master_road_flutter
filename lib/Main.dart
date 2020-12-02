@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:fluttertoast/fluttertoast.dart';
+import 'package:master_road_flutter/Route.dart';
+import 'package:master_road_flutter/home/Home.dart';
 
 class MyApp extends StatelessWidget {
   @override
@@ -32,10 +33,10 @@ class _MyHomePageState extends State<MyHomePage> {
     });
   }
 
-  _toast(){
-    // Navigator.of(context).pushNamed('/home');
+  _toast() {
     print("_toast");
-    Navigator.pushNamed(context, '/home');
+
+    // Navigator.pushNamed(context, RouterPath.home);
     // Fluttertoast.showToast(
     //     msg: "这是一个toast",
     //     toastLength: Toast.LENGTH_LONG,
@@ -64,11 +65,13 @@ class _MyHomePageState extends State<MyHomePage> {
               style: Theme.of(context).textTheme.headline4,
             ),
             RaisedButton(
-              onPressed: _toast,
-              // onPressed: () {
-              //   _toast();
-              //   Navigator.of(context).pushNamed('/home');
-              // },
+              // onPressed: _toast,
+              onPressed: () {
+                _toast();
+                // MaterialPageRoute(builder: (context) {
+                //   return Home();
+                // });
+              },
               child: Text("点击跳转哦!"),
             )
           ],

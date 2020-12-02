@@ -9,8 +9,13 @@ void main() {
   runApp(MaterialApp(
     home: Home(),
     routes: <String, WidgetBuilder>{
-      '/main': (context) => MyApp(),
-      '/home': (context) => Home(),
+      RouterPath.main: (context) => MyApp(),
+      RouterPath.home: (context) => Home(),
     },
   ));
+}
+
+class RouterPath {
+  static String main = '/main';
+  static String home = '/home';
 }
