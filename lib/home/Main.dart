@@ -1,15 +1,15 @@
 import 'package:flutter/material.dart';
 
-class Home extends StatefulWidget {
-  Home({Key key}) : super(key: key);
+class Main extends StatefulWidget {
+  Main({Key key}) : super(key: key);
 
   @override
-  _HomeState createState() {
-    return _HomeState();
+  _MainState createState() {
+    return _MainState();
   }
 }
 
-class _HomeState extends State<Home> {
+class _MainState extends State<Main> {
   @override
   void initState() {
     super.initState();
@@ -24,20 +24,16 @@ class _HomeState extends State<Home> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: Text("LiveViewPage"),
+          title: Text("加油 Flutter"),
         ),
         body: (ListView(
           scrollDirection: Axis.vertical,
           children: <Widget>[
-            Text('Row One'),
-            Text('Row Two'),
-            Text('Row Three'),
-            Text('Row Four'),
             RaisedButton(
               onPressed: () {
-                Navigator.pop(context);
+                // Navigator.pushNamed(context, RouterPath.main);
               },
-              child: Text("点击返回哦!"),
+              child: Text("main"),
             )
           ],
         )));
