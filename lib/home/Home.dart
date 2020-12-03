@@ -1,18 +1,46 @@
 import 'package:flutter/material.dart';
 
-import 'LiveViewPage.dart';
-
-class Home extends StatelessWidget {
+class Home extends StatefulWidget {
   Home({Key key}) : super(key: key);
 
   @override
+  _HomeState createState() {
+    return _HomeState();
+  }
+}
+
+class _HomeState extends State<Home> {
+  @override
+  void initState() {
+    super.initState();
+  }
+
+  @override
+  void dispose() {
+    super.dispose();
+  }
+
+  @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Flutter Demo',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
-      home: LiveViewPage(),
-    );
+    return Scaffold(
+        appBar: AppBar(
+          title: Text("LiveViewPage"),
+        ),
+        body: (ListView(
+          scrollDirection: Axis.vertical,
+          children: <Widget>[
+            Text('Row One'),
+            Text('Row Two'),
+            Text('Row Three'),
+            Text('Row Four'),
+            RaisedButton(
+              // onPressed: _toast,
+              onPressed: () {
+                Navigator.pop(context);
+              },
+              child: Text("点击返回哦!"),
+            )
+          ],
+        )));
   }
 }

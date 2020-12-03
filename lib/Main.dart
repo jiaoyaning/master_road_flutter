@@ -34,9 +34,15 @@ class _MyHomePageState extends State<MyHomePage> {
   }
 
   _toast() {
-    print("_toast");
-
     // Navigator.pushNamed(context, RouterPath.home);
+
+    print("push start");
+    Navigator.push(context, MaterialPageRoute(builder: (_) {
+      return Home();
+    }));
+    // Navigator.pushNamed(context, RouterPath.home);
+    print("push end");
+
     // Fluttertoast.showToast(
     //     msg: "这是一个toast",
     //     toastLength: Toast.LENGTH_LONG,
@@ -68,9 +74,6 @@ class _MyHomePageState extends State<MyHomePage> {
               // onPressed: _toast,
               onPressed: () {
                 _toast();
-                // MaterialPageRoute(builder: (context) {
-                //   return Home();
-                // });
               },
               child: Text("点击跳转哦!"),
             )

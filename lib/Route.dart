@@ -1,13 +1,13 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:master_road_flutter/home/Home.dart';
 
 import 'Main.dart';
+import 'home/Home.dart';
 
 void main() {
   //入口
   runApp(MaterialApp(
-    home: Home(),
+    home: MyApp(),
     routes: <String, WidgetBuilder>{
       RouterPath.main: (context) => MyApp(),
       RouterPath.home: (context) => Home(),
