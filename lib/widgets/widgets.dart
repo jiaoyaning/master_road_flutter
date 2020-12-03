@@ -25,13 +25,13 @@ class _WidgetsState extends State<Widgets> {
     return MaterialApp(
       title: "Widgets Demo",
       home: Scaffold(
-        appBar: AppBar(
-          title: Text('Widgets test'),
-        ),
-        body: Center(
-          child: Text('Hello World'),
-        ),
-      ),
+          appBar: AppBar(
+            title: Text('Widgets test'),
+          ),
+          body: ListView(
+            scrollDirection: Axis.vertical,
+            children: <Widget>[Text("我是一个Text"),]
+          )),
     );
   }
 }
