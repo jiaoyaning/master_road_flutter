@@ -34,7 +34,6 @@ class _HomeState extends State<Home> {
             Text('Row Three'),
             Text('Row Four'),
             RaisedButton(
-              // onPressed: _toast,
               onPressed: () {
                 Navigator.pop(context);
               },
