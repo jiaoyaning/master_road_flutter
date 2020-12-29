@@ -40,7 +40,16 @@ class _WidgetsState extends State<Widgets> {
                * symmetric({vertical, horizontal})：用于设置对称方向的填充，vertical指top和bottom，horizontal指left和right。
                */
                 padding: EdgeInsets.symmetric(vertical: 5),
-                child: Text('我是一个居中Text', textAlign: TextAlign.center),
+                margin: EdgeInsets.all(10),
+                child: Text(
+                  '我是一个居中斜体加粗体有边框的Text',
+                  textAlign: TextAlign.center,
+                  style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 16,
+                      fontStyle: FontStyle.italic,
+                      fontWeight: FontWeight.bold),
+                ),
                 decoration: BoxDecoration(
                     color: Colors.red,
                     borderRadius: BorderRadius.circular(12),
