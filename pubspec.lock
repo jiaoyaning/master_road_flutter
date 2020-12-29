@@ -49,7 +49,7 @@ packages:
       name: cupertino_icons
       url: "https://pub.flutter-io.cn"
     source: hosted
-    version: "1.0.1+1"
+    version: "1.0.2"
   fake_async:
     dependency: transitive
     description:
@@ -78,7 +78,7 @@ packages:
       name: fluttertoast
       url: "https://pub.flutter-io.cn"
     source: hosted
-    version: "7.1.5"
+    version: "7.1.6"
   js:
     dependency: transitive
     description:
